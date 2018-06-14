@@ -1,0 +1,10 @@
+div.outPut {
+  border: 2px solid #ccc;
+  width: 15rem;
+  margin: 1rem auto;
+}
+p {
+  border-bottom: 2px solid #ccc;
+  width: 10rem;
+  margin: 1rem auto;
+}

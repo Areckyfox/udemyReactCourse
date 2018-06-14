@@ -1,0 +1,10 @@
+input {
+  width: 5rem;
+  height: 5rem;
+}
+input::selection {
+  background-color: #ccc;
+}
+input:hover {
+  border: 2px solid rgb(14, 13, 13);
+}
