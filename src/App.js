@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.css";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
     const persons = [...this.state.persons];
 
     persons.splice(personIndex, 1);
-    console.log(persons);
+    // console.log(persons);
 
     this.setState({
       persons: persons
@@ -80,17 +80,19 @@ class App extends Component {
         </div>
       );
     }
-    const classes = [];
+    const assignedClasses = [];
     if (this.state.persons.length <= 2) {
-      classes.push("red");
+      assignedClasses.push(classes.red);
     }
     if (this.state.persons.length <= 1) {
-      classes.push("bold");
+      assignedClasses.push(classes.bold);
     }
+    console.log(assignedClasses.join(" "));
+
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1>Hello World I'm start new begin</h1>
-        <p className={classes.join(" ")}>This really working</p>
+        <p className={assignedClasses.join(" ")}>This really working</p>
         <button style={style} onClick={this.clickShowHandler}>
           Show Person
         </button>
